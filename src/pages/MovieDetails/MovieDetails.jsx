@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { RenderDetails } from 'components/RenderDetails/RenderDetails';
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
@@ -14,7 +14,7 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const location = useLocation();
-  const backLink = location.state?.from ?? '/';
+  const backLink = useRef(location.state?.from ?? '/');
 
   const { movieId } = useParams();
 
@@ -38,7 +38,7 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <Link to={backLink} className={css.linkBack}>
+      <Link to={backLink.current} className={css.linkBack}>
         Back
       </Link>
 

@@ -13,7 +13,7 @@ const Cast = () => {
     const movieCast = async () => {
       try {
         const response = await GetMovieCast(movieId);
-        console.log(response);
+        // console.log(response);
         const { cast } = response.data;
         setCast(cast);
       } catch (error) {

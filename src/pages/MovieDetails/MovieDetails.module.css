@@ -1,0 +1,11 @@
+.linkBack {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.linkNav {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}

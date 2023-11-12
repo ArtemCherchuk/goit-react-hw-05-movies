@@ -1,0 +1,12 @@
+.containerInfo {
+  display: flex;
+  padding: 20px 0 20px 20px;
+}
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+
+  padding-left: 20px;
+}
